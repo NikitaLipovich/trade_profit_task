@@ -66,6 +66,7 @@ void Algo::findMaxProfit() {
 
     Day day_min(0, 255);
     Day day_max(0, 0);
+    profit.profit = 0;
 
     for (uint8_t i = 0; i < history->count; i++) {
         if (history->days[i] < day_min.value) {
