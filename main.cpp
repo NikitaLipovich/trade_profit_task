@@ -44,7 +44,7 @@ struct History {
 
 class Algo {
 public:
-    Algo() : history(std::make_unique<History>()) {}
+    Algo() : history(std::make_unique<History>()){}
 
     void findMaxProfit();
     void setHistory(std::unique_ptr<History>&& h) {
@@ -66,7 +66,6 @@ void Algo::findMaxProfit() {
 
     Day day_min(0, 255);
     Day day_max(0, 0);
-    profit = TotalProfit();
 
     for (uint8_t i = 0; i < history->count; i++) {
         if (history->days[i] < day_min.value) {
